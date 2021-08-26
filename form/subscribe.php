@@ -6,10 +6,10 @@ $mail = new PHPMailer();
 $emailTO = $emailBCC =  $emailCC = array(); $formEmail = '';
 
 ### Enter Your Sitename 
-$sitename = 'Your Site Name';
+$sitename = 'Genesis Coin';
 
 ### Enter your email addresses: @required
-$emailTO[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' ); 
+$emailTO[] = array( 'email' => 'muskydoge123@gmail.com', 'name' => 'Genesis Coin' ); 
 
 ### Enable bellow parameters & update your BCC email if require.
 //$emailBCC[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' );
@@ -21,7 +21,7 @@ $emailTO[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' );
 $subject = "Subscribtion Notification" . ' - ' . $sitename; 
 
 ### If your did not recive email after submit form please enable below line and must change to your correct domain name. eg. noreply@example.com
-//$formEmail = 'noreply@yoursite.com';
+$formEmail = 'noreply@genesiscoin.net';
 
 ### Success Messages
 $msg_success = "You have <strong>successfully</strong> Subscribed. We'll get back to you soon.";
