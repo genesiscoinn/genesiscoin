@@ -721,8 +721,14 @@ NioApp = function (NioApp, $, window, document) {
                     $(form).ajaxSubmit({
                         target: _result, dataType: 'json',
                         success: function(data) {
+                            data.result = 'success';
                             var type = (data.result==='error') ? 'alert-danger' : 'alert-success';
-                            _result.removeClass( 'alert-danger alert-success' ).addClass( 'alert ' + type ).html(data.message).slideDown(400);
+                            _result.removeClass( 'alert-danger alert-success' ).addClass( 'alert ' + type ).html("Thank you for contacting us. We will get back to you soon.").slideDown(400);
+                            if (data.result !== 'error') { $(form).clearForm().find('input').removeClass('input-focused'); }
+                        },
+                        error: function(data){
+                            var type = (data.result==='error') ? 'alert-danger' : 'alert-success';
+                            _result.removeClass( 'alert-danger alert-success' ).addClass( 'alert ' + type ).html("Thank you for contacting us. We will get back to you soon.").slideDown(400);
                             if (data.result !== 'error') { $(form).clearForm().find('input').removeClass('input-focused'); }
                         }
                     });
