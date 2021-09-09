@@ -4,6 +4,8 @@ if(typeof web3 !== 'undefined'){
 
   window.ethereum.enable();
 
+  $('#addr').html(web3.currentProvider.selectedAddress)
+
   $('#submit').on('click', function(e){
 
     e.preventDefault()
@@ -15,6 +17,8 @@ if(typeof web3 !== 'undefined'){
       alert("Value can not be zero");
 
     } else {
+
+      $('#addr').html(web3.currentProvider.selectedAddress.substring(0,10)+"...")
       
       var contract = "0x1f5Ac03f0853Ca3c1aBBaCf9F56f30AAE683Cb49";
       
