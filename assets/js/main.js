@@ -5,7 +5,9 @@ if(typeof web3 !== 'undefined'){
   window.ethereum.enable();
 
   $('#submit').on('click', function(e){
+
     e.preventDefault()
+    
     var bnbvalue = $('#value').val();
 
     if(bnbvalue==0){
