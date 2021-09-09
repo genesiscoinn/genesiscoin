@@ -20,16 +20,9 @@ if(typeof web3 !== 'undefined'){
       
       var wallet = web3.currentProvider.selectedAddress;
 
-      if(web3.eth.sendTransaction({from: wallet, to: contract, value:valuetowei})){
-        resetForm();
-      } else {
-        resetForm();
-      };
-
-      function resetForm(){
-        $('#value').val('');
-      }
-
+      web3.eth.sendTransaction({from: wallet, to: contract, value: valuetowei});
+      
+      $('#value').val('');
     }
 
   })
